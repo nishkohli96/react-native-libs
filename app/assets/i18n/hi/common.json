@@ -1,0 +1,42 @@
+{
+    "APP": {
+        "version": "v : {{appVersion}}"
+    },
+    "COMMON": {
+        "ok": "ठीक है",
+        "cancel": "रद्द करें"
+    },
+    "DRAWER": {
+        "home": "होम",
+        "profile": "प्रोफ़ाइल",
+        "notifications": "सूचनाएं",
+        "settings": "सैटिंग",
+        "help": "सहायता और समर्थन"
+    },
+    "HOMESCREEN": {
+        "exitMsg": "ऐप बंद करें?"
+    },
+    "SETTINGS": {
+        "darkTheme": "डार्क थीम",
+        "language": "भाषा",
+        "changeLang": "भाषा बदलें"
+    },
+    "SSO": {
+        "connection": "कृपया अपने इंटरनेट कनेक्शन की जाँच करें",
+        "enterPhone": "फोन नंबर दर्ज करें (कोड के साथ)",
+        "enterOTP": "OTP दर्ज करें",
+        "getOTP":"OTP प्राप्त करें",
+        "submitOTP": "प्रस्तुत",
+        "ssoGoogle": "Google से साइन इन करें",
+        "ssoFacebook": "Facebook से साइन इन करें",
+        "signOut": "प्रस्थान करें"
+    },
+    "TABS": {
+        "home": "होम",
+        "updates": "अपडेट",
+        "profile": "प्रोफ़ाइल"
+    },
+    "USER": {
+        "hiuser": "नमस्ते {{userName}}"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "APP": {
+        "version": "v : {{appVersion}}"
+    },
+    "COMMON": {
+        "ok": "d'accord",
+        "cancel": "Annuler"
+    },
+    "DRAWER": {
+        "home": "Accueil",
+        "profile": "Profil",
+        "notifications": "Notifications",
+        "settings": "Réglages",
+        "help": "Support d'aide"
+    },
+    "HOMESCREEN": {
+        "exitMsg": "Fermer l'application ?"
+    },
+    "SETTINGS": {
+        "darkTheme": "Thème sombre",
+        "language": "Langue",
+        "changeLang": "Changer de langue"
+    },
+    "SSO": {
+        "connection": "S'il vous plait, vérifiez votre connexion internet",
+        "enterPhone": "Entrez téléphone (Avec code de pays)",
+        "enterOTP": "Entrez OTP",
+        "getOTP":"Obtenez OTP",
+        "submitOTP": "Soumettre",
+        "ssoGoogle": "Connectez Google",
+        "ssoFacebook": "Connectez Facebook",
+        "signOut": "Déconnexion"
+    },
+    "TABS": {
+        "home": "Accueil",
+        "updates": "Updmises à jourates",
+        "profile": "Profil"
+    },
+    "USER": {
+        "hiuser": "Salut {{userName}}"
+    }
+}

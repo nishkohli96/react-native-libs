@@ -1,0 +1,42 @@
+{
+    "APP": {
+        "version": "v : {{appVersion}}"
+    },
+    "COMMON": {
+        "ok": "OK",
+        "cancel": "CANCEL"
+    },
+    "DRAWER": {
+        "home": "Home",
+        "profile": "Profile",
+        "notifications": "Notifications",
+        "settings": "Settings",
+        "help": "Help & Support"
+    },
+    "HOMESCREEN": {
+        "exitMsg": "Close the app?"
+    },
+    "SETTINGS": {
+        "darkTheme": "Dark Theme",
+        "language": "Language",
+        "changeLang": "Change Language"
+    },
+    "SSO": {
+        "connection": "Please Check your Internet Connection",
+        "enterPhone": "Enter Phone Number(With Country Code)",
+        "enterOTP": "Enter OTP",
+        "getOTP":"Get OTP",
+        "submitOTP": "Submit",
+        "ssoGoogle": "Sign in with Google",
+        "ssoFacebook": "Sign in with Facebook",
+        "signOut": "Sign out"
+    },
+    "TABS": {
+        "home": "Home",
+        "updates": "Updates",
+        "profile": "Profile"
+    },
+    "USER": {
+        "hiuser": "Hi {{userName}}"
+    }
+}
