@@ -1,4 +1,4 @@
-# RnTemplate
+# react-native-libs
 
 **"An Ideal app-template to start your next `react-native` project."**
 
