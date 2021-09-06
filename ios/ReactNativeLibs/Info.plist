@@ -5,9 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>UIAppFonts</key>
-	<array/>
+	<array>
+		<string>Ionicons.ttf</string>
+	</array>
 	<key>CFBundleDisplayName</key>
-	<string>RnTemplate</string>
+	<string>ReactNativeLibs</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
