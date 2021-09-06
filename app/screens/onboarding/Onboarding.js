@@ -86,18 +86,15 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 25,
-        fontFamily: 'Poppins-Bold',
         margin: 10,
     },
     subHeading: {
         fontSize: 15,
-        fontFamily: 'Poppins-Light',
         margin: 5,
     },
     ctaBtn: {
         marginRight: 20,
         fontSize: 20,
-        fontFamily: 'Poppins-SemiBold',
     },
     image: {
         width: 250,
