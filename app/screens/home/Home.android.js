@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { useFocusEffect } from '@react-navigation/native';
 import Clipboard from '@react-native-community/clipboard';
 import Config from 'react-native-config';
+import { SwipeActionView } from 'react-native-action-view';
 
 import Header from '_Shared/Header';
 import {
@@ -90,6 +91,11 @@ const App = () => {
         copiedText: {
             marginTop: 10,
             color: '#007aba',
+        },
+        swiperView: {
+            marginTop: 30,
+            backgroundColor: 'grey',
+            padding: 20,
         },
     });
 
@@ -176,6 +182,69 @@ const App = () => {
 
                     <ThemedText>{copiedText}</ThemedText>
                     <ThemedText>{Config.SOME_ENV_KEY}</ThemedText>
+
+                    <SwipeActionView
+                        style={styles.swiperView}
+                        rightExpansionSettings={{ buttonIndex: 0 }}
+                        leftExpansionSettings={{ buttonIndex: 0 }}
+                        rightButtons={[
+                            {
+                                title: 'Red',
+                                color: 'rgb(255, 0, 0)',
+                                callback: () => {
+                                    alert('Red button tapped.');
+                                },
+                            },
+                            {
+                                title: 'Green',
+                                color: 'rgb(0, 255, 0)',
+                                callback: () => {
+                                    alert('Green button tapped.');
+                                },
+                            },
+                            {
+                                title: 'Blue',
+                                color: 'rgb(0, 0, 255)',
+                                callback: () => {
+                                    alert('Blue button tapped.');
+                                },
+                            },
+                        ]}
+                        leftButtons={[
+                            {
+                                title: 'Red',
+                                color: 'rgb(255, 0, 0)',
+                                callback: () => {
+                                    alert('Red button tapped.');
+                                },
+                            },
+                            {
+                                title: 'Green',
+                                color: 'rgb(0, 255, 0)',
+                                callback: () => {
+                                    alert('Green button tapped.');
+                                },
+                            },
+                            {
+                                title: 'Blue',
+                                color: 'rgb(0, 0, 255)',
+                                callback: () => {
+                                    alert('Blue button tapped.');
+                                },
+                            },
+                        ]}
+                        leftSwipeSettings={{
+                            transition: 'rotate3d',
+                            enableSwipeBounces: true,
+                        }}
+                        rightSwipeSettings={{
+                            transition: 'clipCenter',
+                            enableSwipeBounces: false,
+                        }}>
+                        <ThemedText>
+                            To get started, swipe this view.
+                        </ThemedText>
+                    </SwipeActionView>
                 </ThemedCard>
             </ThemedBody>
         </ThemedContainer>

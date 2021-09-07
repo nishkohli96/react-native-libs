@@ -5,6 +5,7 @@
 ## Libraries Used
 
 -   [@react-native-community/clipboard](https://www.npmjs.com/package/@react-native-community/clipboard)
+-   [react-native-action-view](https://www.npmjs.com/package/react-native-action-view)
 -   [react-native-config](https://www.npmjs.com/package/react-native-config)
 
 # Support Me
