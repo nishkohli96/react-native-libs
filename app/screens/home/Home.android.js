@@ -4,6 +4,7 @@ import {
     Text,
     Modal,
     View,
+    Pressable,
     StyleSheet,
     TouchableOpacity,
 } from 'react-native';
@@ -27,6 +28,18 @@ const App = () => {
     const backAction = () => {
         setOpen(true);
         return true; /* else the app will exit */
+    };
+
+    const [pressText, setPressText] = React.useState('Press me');
+    const [copiedText, setCopiedText] = React.useState('');
+
+    const copyToClipboard = () =>
+        Clipboard.setString('this is a copied string');
+
+    const fetchCopiedText = async () => {
+        /* Somehow shows blank text when console.log, but setText() works */
+        const text = await Clipboard.getString();
+        setCopiedText(text);
     };
 
     const styles = StyleSheet.create({
@@ -61,6 +74,21 @@ const App = () => {
             alignItems: 'center',
         },
         touchArea: { padding: 10 },
+        copyCard: { marginTop: 30 },
+        pressView: {
+            borderColor: 'grey',
+            padding: 10,
+            backgroundColor: 'silver',
+            marginTop: 10,
+            marginBottom: 10,
+        },
+        pressedText: {
+            color: 'red',
+        },
+        copiedText: {
+            marginTop: 10,
+            color: '#007aba',
+        },
     });
 
     const ModalComponent = () => (
@@ -112,8 +140,39 @@ const App = () => {
             <Header title={t('DRAWER.home')} openDrawer />
             <ThemedBody>
                 <ModalComponent />
+
                 <ThemedCard>
                     <ThemedText>Welcome to the HomeScreen !!!</ThemedText>
+                </ThemedCard>
+
+                <ThemedCard style={styles.copyCard}>
+                    <ThemedText style={styles.headerText}>
+                        Pressable Component - Click/Press the button
+                    </ThemedText>
+
+                    <Pressable
+                        onPressIn={() => setPressText('normal press')}
+                        onPressOut={() => setPressText('Press Me')}
+                        onLongPress={() => setPressText('On Long Press...')}>
+                        <View style={styles.pressView}>
+                            <ThemedText style={styles.pressedText}>
+                                {pressText}
+                            </ThemedText>
+                        </View>
+                    </Pressable>
+
+                    <TouchableOpacity onPress={copyToClipboard}>
+                        <View style={styles.pressView}>
+                            <ThemedText>
+                                Click here to copy to Clipboard
+                            </ThemedText>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={fetchCopiedText}>
+                        <ThemedText>View copied text</ThemedText>
+                    </TouchableOpacity>
+
+                    <ThemedText>{copiedText}</ThemedText>
                 </ThemedCard>
             </ThemedBody>
         </ThemedContainer>

@@ -16,13 +16,12 @@ const App = () => {
     const [pressText, setPressText] = React.useState('Press me');
     const [copiedText, setCopiedText] = React.useState('');
 
-    const copyToClipboard = () => {
+    const copyToClipboard = () =>
         Clipboard.setString('this is a copied string');
-    };
 
     const fetchCopiedText = async () => {
+        /* Somehow shows blank text when console.log, but setText() works */
         const text = await Clipboard.getString();
-        console.log('text: ', text);
         setCopiedText(text);
     };
 
@@ -36,7 +35,7 @@ const App = () => {
 
                 <ThemedCard style={styles.copyCard}>
                     <ThemedText style={styles.headerText}>
-                        Click The Appropriate Btn to see their functionality
+                        Pressable Component - Click/Press the button
                     </ThemedText>
 
                     <Pressable
@@ -61,9 +60,7 @@ const App = () => {
                         <ThemedText>View copied text</ThemedText>
                     </TouchableOpacity>
 
-                    <ThemedText>
-                        {copiedText}
-                    </ThemedText>
+                    <ThemedText>{copiedText}</ThemedText>
                 </ThemedCard>
             </ThemedBody>
         </ThemedContainer>

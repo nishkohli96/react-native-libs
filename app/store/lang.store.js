@@ -39,7 +39,7 @@ export const LangStoreContext = createContext(langStore);
 export const useLangStore = () => useContext(LangStoreContext);
 
 export const Languages = [
-    { label: 'English', value: 'en', },
+    { label: 'English', value: 'en' },
     { label: 'Français', value: 'fr' },
     { label: 'हिंदी', value: 'hi' },
 ];

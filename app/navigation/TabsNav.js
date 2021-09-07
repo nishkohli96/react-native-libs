@@ -32,8 +32,7 @@ const TabsNav = () => {
             initialRouteName="Feed"
             barStyle={styles.barStyles}
             shifting={false} // inactive tabs label won't show
-            backBehavior="order"
-        >
+            backBehavior="order">
             <Tab.Screen
                 name="Feed"
                 component={IntroScreen1}

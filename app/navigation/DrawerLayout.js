@@ -57,7 +57,9 @@ const DrawerLayout = () => {
                             size={CommonStyles.icons.drawerIcon}
                         />
                     )}
-                    label={() => <ThemedHeading>{t('DRAWER.settings')}</ThemedHeading>}
+                    label={() => (
+                        <ThemedHeading>{t('DRAWER.settings')}</ThemedHeading>
+                    )}
                     onPress={() => {
                         navigation.navigate('Settings');
                     }}

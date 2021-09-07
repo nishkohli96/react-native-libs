@@ -4,8 +4,8 @@
 
 ## Libraries Used
 
-- [@react-native-community/clipboard](https://www.npmjs.com/package/@react-native-community/clipboard)
+-   [@react-native-community/clipboard](https://www.npmjs.com/package/@react-native-community/clipboard)
 
 # Support Me
 
-If you found this template helpful and saved your valuable time, consider [buying me a coffee](https://www.buymeacoffee.com/nish1896)  
+If you found this project helpful, consider [buying me a coffee](https://www.buymeacoffee.com/nish1896)

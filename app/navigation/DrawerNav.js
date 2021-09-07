@@ -17,8 +17,7 @@ const NavDrawer = () => {
             initialRouteName="Home"
             overlayColor="transparent"
             screenOptions={{ headerShown: false }}
-            drawerContent={() => <DrawerLayout />}
-        >
+            drawerContent={() => <DrawerLayout />}>
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="TabsNav" component={TabsNav} />
             <Drawer.Screen name="Settings" component={Settings} />

@@ -25,7 +25,7 @@
         "connection": "S'il vous plait, vérifiez votre connexion internet",
         "enterPhone": "Entrez téléphone (Avec code de pays)",
         "enterOTP": "Entrez OTP",
-        "getOTP":"Obtenez OTP",
+        "getOTP": "Obtenez OTP",
         "submitOTP": "Soumettre",
         "ssoGoogle": "Connectez Google",
         "ssoFacebook": "Connectez Facebook",
