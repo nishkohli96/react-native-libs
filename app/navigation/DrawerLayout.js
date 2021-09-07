@@ -39,19 +39,6 @@ const DrawerLayout = () => {
                 <DrawerItem
                     icon={() => (
                         <IoniconsI
-                            name="logo-android"
-                            color={themeObj.colors.heading}
-                            size={CommonStyles.icons.drawerIcon}
-                        />
-                    )}
-                    label={() => <ThemedHeading>TABS</ThemedHeading>}
-                    onPress={() => {
-                        navigation.navigate('TabsNav');
-                    }}
-                />
-                <DrawerItem
-                    icon={() => (
-                        <IoniconsI
                             name="ios-settings-outline"
                             color={themeObj.colors.heading}
                             size={CommonStyles.icons.drawerIcon}
