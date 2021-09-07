@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useFocusEffect } from '@react-navigation/native';
+import Clipboard from '@react-native-community/clipboard';
+import Config from 'react-native-config';
 
 import Header from '_Shared/Header';
 import {
@@ -173,6 +175,7 @@ const App = () => {
                     </TouchableOpacity>
 
                     <ThemedText>{copiedText}</ThemedText>
+                    <ThemedText>{Config.SOME_ENV_KEY}</ThemedText>
                 </ThemedCard>
             </ThemedBody>
         </ThemedContainer>
