@@ -7,11 +7,9 @@
         "cancel": "CANCEL"
     },
     "DRAWER": {
+        "contacts": "Contacts",
         "home": "Home",
-        "profile": "Profile",
-        "notifications": "Notifications",
-        "settings": "Settings",
-        "help": "Help & Support"
+        "settings": "Settings"
     },
     "HOMESCREEN": {
         "exitMsg": "Close the app?"

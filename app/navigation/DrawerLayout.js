@@ -51,6 +51,21 @@ const DrawerLayout = () => {
                         navigation.navigate('Settings');
                     }}
                 />
+                <DrawerItem
+                    icon={() => (
+                        <IoniconsI
+                            name="person"
+                            color={themeObj.colors.heading}
+                            size={CommonStyles.icons.drawerIcon}
+                        />
+                    )}
+                    label={() => (
+                        <ThemedHeading>{t('DRAWER.contacts')}</ThemedHeading>
+                    )}
+                    onPress={() => {
+                        navigation.navigate('ContactsList');
+                    }}
+                />
             </DrawerContentScrollView>
             <DrawerItem
                 label={() => (
