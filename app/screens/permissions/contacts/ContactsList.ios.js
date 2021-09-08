@@ -6,16 +6,15 @@ import {
     ActivityIndicator,
 } from 'react-native';
 import Contacts from 'react-native-contacts';
+import { useTranslation } from 'react-i18next';
 
-import {
-    ThemedContainer,
-    ThemedBody,
-    ThemedText,
-} from '_Shared/Comps.themed';
+import { ThemedContainer, ThemedBody, ThemedText } from '_Shared/Comps.themed';
+import Header from '_Shared/Header';
 import ContactItem from './ContactItem';
 
 /* Read the Guide - https://www.npmjs.com/package/react-native-contacts */
 const ContactsList = () => {
+    const { t } = useTranslation('common');
     const [contacts, setContacts] = React.useState([]);
 
     React.useEffect(() => {
@@ -56,6 +55,7 @@ const ContactsList = () => {
 
     return (
         <ThemedContainer>
+            <Header title={t('DRAWER.contacts')} openDrawer />
             <ThemedBody>
                 <ThemedText>Get all your contacts</ThemedText>
             </ThemedBody>
@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
     },
     listView: {
         paddingLeft: 30,
-        marginTop: 30,
     },
 });
 

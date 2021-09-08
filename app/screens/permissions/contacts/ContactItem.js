@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Contacts from 'react-native-contacts';
 
-import { ThemedView, ThemedText } from '_Shared/Comps.themed';
+import { ThemedBody, ThemedCard, ThemedText } from '_Shared/Comps.themed';
 import ContactAvatar from './ContactAvatar';
 
-const getAvatarInitials = (textString) => {
+const getAvatarInitials = textString => {
     if (!textString) {
         return '';
     }
@@ -19,7 +19,7 @@ const getAvatarInitials = (textString) => {
     return initials;
 };
 
-const ContactItem = (props) => {
+const ContactItem = props => {
     const { item } = props;
 
     const OpenContact = async () => {
@@ -29,9 +29,9 @@ const ContactItem = (props) => {
 
     return (
         <TouchableOpacity onPress={() => OpenContact()}>
-            <ThemedView>
-                <ThemedView style={styles.itemContainer}>
-                    <ThemedView style={styles.leftElementContainer}>
+            <ThemedBody>
+                <ThemedCard style={styles.itemContainer}>
+                    <View style={styles.leftElementContainer}>
                         <ContactAvatar
                             img={
                                 item.hasThumbnail
@@ -39,28 +39,26 @@ const ContactItem = (props) => {
                                     : undefined
                             }
                             placeholder={getAvatarInitials(
-                                `${item.givenName} ${item.familyName}`
+                                `${item.givenName} ${item.familyName}`,
                             )}
                             width={40}
                             height={40}
                         />
-                    </ThemedView>
-                    <ThemedView style={styles.rightSectionContainer}>
-                        <ThemedView style={styles.mainTitleContainer}>
-                            <ThemedText
-                                style={styles.titleStyle}
-                            >{`${item.givenName} ${item.familyName}`}</ThemedText>
-                            {item.phoneNumbers === undefined ? (
-                                <></>
-                            ) : (
+                    </View>
+                    <View style={styles.rightSectionContainer}>
+                        <View style={styles.mainTitleContainer}>
+                            <ThemedText style={styles.titleStyle}>
+                                {`${item.givenName} ${item.familyName}`}
+                            </ThemedText>
+                            {item.phoneNumbers && (
                                 <ThemedText>
-                                    ( {`${item.phoneNumbers.number}`} )
+                                    {`${item.phoneNumbers.number}`}
                                 </ThemedText>
                             )}
-                        </ThemedView>
-                    </ThemedView>
-                </ThemedView>
-            </ThemedView>
+                        </View>
+                    </View>
+                </ThemedCard>
+            </ThemedBody>
         </TouchableOpacity>
     );
 };
@@ -69,7 +67,6 @@ const styles = StyleSheet.create({
     itemContainer: {
         flexDirection: 'row',
         minHeight: 44,
-        height: 63,
     },
     leftElementContainer: {
         justifyContent: 'center',
@@ -81,8 +78,6 @@ const styles = StyleSheet.create({
         marginLeft: 18,
         flexDirection: 'row',
         flex: 20,
-        borderBottomWidth: StyleSheet.hairlineWidth,
-        borderColor: '#515151',
     },
     mainTitleContainer: {
         justifyContent: 'center',

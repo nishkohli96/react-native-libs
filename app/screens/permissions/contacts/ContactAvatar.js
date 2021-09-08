@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, View, Text, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-const ContactAvatar = (props) => {
+const ContactAvatar = props => {
     renderImage = () => {
         const { img, width, height, roundedImage } = props;
         const { imageContainer, image } = styles;
@@ -35,8 +35,7 @@ const ContactAvatar = (props) => {
                         style={[
                             { fontSize: Math.round(width) / 2 },
                             placeholderText,
-                        ]}
-                    >
+                        ]}>
                         {placeholder}
                     </Text>
                 </View>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { View, StyleSheet, Platform } from 'react-native';
 import { observer } from 'mobx-react-lite';
 import { useNavigation } from '@react-navigation/native';
@@ -7,7 +8,7 @@ import IoniconsI from 'react-native-vector-icons/Ionicons';
 import { ThemedHeading } from './Comps.themed';
 import { useThemeStore } from '_Store/theme.store';
 
-const Header = ({ title, openDrawer = false }) => {
+const Header = ({ title }) => {
     const navigation = useNavigation();
     const { themeObj } = useThemeStore();
 
@@ -33,26 +34,21 @@ const Header = ({ title, openDrawer = false }) => {
 
     return (
         <View style={styles.container}>
-            {openDrawer ? (
-                <IoniconsI
-                    name="md-menu-outline"
-                    size={30}
-                    color={themeObj.colors.heading}
-                    onPress={() => navigation.openDrawer()}
-                />
-            ) : (
-                <IoniconsI
-                    name="arrow-back"
-                    size={25}
-                    color={themeObj.colors.heading}
-                    onPress={() => navigation.goBack()}
-                />
-            )}
+            <IoniconsI
+                name="md-menu-outline"
+                size={30}
+                color={themeObj.colors.heading}
+                onPress={() => navigation.openDrawer()}
+            />
             <View style={styles.textView}>
                 <ThemedHeading>{title}</ThemedHeading>
             </View>
         </View>
     );
+};
+
+Header.propTypes = {
+    title: PropTypes.string,
 };
 
 export default observer(Header);
