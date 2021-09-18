@@ -1,6 +1,6 @@
 # react-native-libs
 
-**"An Ideal app-template to start your next `react-native` project."**
+**"One or more of the used libraries would be a must in your next `react-native` project"**
 
 ## Libraries Used
 
