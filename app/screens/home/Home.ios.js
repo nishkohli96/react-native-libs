@@ -2,7 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity, Pressable, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import Clipboard from '@react-native-community/clipboard';
-import { SOME_ENV_KEY } from 'react-native-dotenv';
+import { SOME_ENV_KEY } from '_Env';
 import { SwipeActionView } from 'react-native-action-view';
 
 import Header from '_Shared/Header';

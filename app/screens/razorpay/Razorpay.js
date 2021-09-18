@@ -7,13 +7,18 @@ import { ThemedContainer, ThemedBody, ThemedText } from '_Shared/Comps.themed';
 import Header from '_Shared/Header';
 
 const Razorpay = () => {
+
+    /* 
+        Check test card options here-
+        https://razorpay.com/docs/payments/payments/test-card-upi-details/
+    */
     const doPayment = () => {
         const options = {
             description: 'Test payment',
             image: 'https://i.imgur.com/3g7nmJC.png',
             currency: 'INR',
             key: RAZORPAY_SANDBOX_KEY,
-            amount: '5000',
+            amount: '80000',
             name: 'Jon',
             prefill: {
                 email: 'test@razorpay.com',
@@ -37,8 +42,7 @@ const Razorpay = () => {
         <ThemedContainer>
             <Header title="Tab2" />
             <ThemedBody>
-                <ThemedText>Tab 2.</ThemedText>
-                <Button title="Pay" onPress={() => doPayment()} />
+                <Button title="Pay via Razorpay" onPress={() => doPayment()} />
             </ThemedBody>
         </ThemedContainer>
     );
