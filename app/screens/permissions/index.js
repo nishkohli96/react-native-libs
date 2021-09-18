@@ -41,7 +41,7 @@ const Permissions = () => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('ContactsList')}>
+                    onPress={() => navigation.navigate('Location')}>
                     <ThemedCard style={styles.card}>
                         <ThemedText>
                             <IoniconsI
