@@ -55,9 +55,11 @@ const ContactsList = () => {
 
     return (
         <ThemedContainer style={styles.container}>
-            <Header title={t('DRAWER.contacts')} openDrawer />
+            <Header title={t('DRAWER.contacts')} />
             <ThemedBody>
-                <ThemedText>Scroll across the list to see your contacts</ThemedText>
+                <ThemedText>
+                    Scroll across the list to see your contacts
+                </ThemedText>
                 <SafeAreaView style={styles.listView}>
                     <ScrollView>
                         {contacts.map(contact => (

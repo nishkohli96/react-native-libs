@@ -8,7 +8,7 @@ import IoniconsI from 'react-native-vector-icons/Ionicons';
 import { ThemedHeading } from './Comps.themed';
 import { useThemeStore } from '_Store/theme.store';
 
-const Header = ({ title }) => {
+const Header = ({ title, openDrawer = false }) => {
     const navigation = useNavigation();
     const { themeObj } = useThemeStore();
 
@@ -34,12 +34,21 @@ const Header = ({ title }) => {
 
     return (
         <View style={styles.container}>
-            <IoniconsI
-                name="md-menu-outline"
-                size={30}
-                color={themeObj.colors.heading}
-                onPress={() => navigation.openDrawer()}
-            />
+            {openDrawer ? (
+                <IoniconsI
+                    name="md-menu-outline"
+                    size={30}
+                    color={themeObj.colors.heading}
+                    onPress={() => navigation.openDrawer()}
+                />
+            ) : (
+                <IoniconsI
+                    name="arrow-back"
+                    size={30}
+                    color={themeObj.colors.heading}
+                    onPress={() => navigation.goBack()}
+                />
+            )}
             <View style={styles.textView}>
                 <ThemedHeading>{title}</ThemedHeading>
             </View>

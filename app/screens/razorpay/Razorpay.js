@@ -3,11 +3,10 @@ import { Button } from 'react-native';
 import RazorpayCheckout from 'react-native-razorpay';
 
 import { RAZORPAY_SANDBOX_KEY } from '_Env';
-import { ThemedContainer, ThemedBody, ThemedText } from '_Shared/Comps.themed';
+import { ThemedContainer, ThemedBody } from '_Shared/Comps.themed';
 import Header from '_Shared/Header';
 
 const Razorpay = () => {
-
     /* 
         Check test card options here-
         https://razorpay.com/docs/payments/payments/test-card-upi-details/
@@ -40,7 +39,7 @@ const Razorpay = () => {
 
     return (
         <ThemedContainer>
-            <Header title="Tab2" />
+            <Header title="Tab2" openDrawer />
             <ThemedBody>
                 <Button title="Pay via Razorpay" onPress={() => doPayment()} />
             </ThemedBody>

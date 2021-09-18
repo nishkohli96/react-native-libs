@@ -54,16 +54,14 @@ const DrawerLayout = () => {
                 <DrawerItem
                     icon={() => (
                         <IoniconsI
-                            name="person"
+                            name="md-phone-portrait-outline"
                             color={themeObj.colors.heading}
                             size={CommonStyles.icons.drawerIcon}
                         />
                     )}
-                    label={() => (
-                        <ThemedHeading>{t('DRAWER.contacts')}</ThemedHeading>
-                    )}
+                    label={() => <ThemedHeading>Permissions</ThemedHeading>}
                     onPress={() => {
-                        navigation.navigate('ContactsList');
+                        navigation.navigate('Permissions');
                     }}
                 />
                 <DrawerItem
@@ -74,9 +72,7 @@ const DrawerLayout = () => {
                             size={CommonStyles.icons.drawerIcon}
                         />
                     )}
-                    label={() => (
-                        <ThemedHeading>Razorpay</ThemedHeading>
-                    )}
+                    label={() => <ThemedHeading>Razorpay</ThemedHeading>}
                     onPress={() => {
                         navigation.navigate('Razorpay');
                     }}

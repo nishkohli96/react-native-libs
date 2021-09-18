@@ -145,7 +145,7 @@ const App = () => {
 
     return (
         <ThemedContainer>
-            <Header title={t('DRAWER.home')} />
+            <Header title={t('DRAWER.home')} openDrawer />
             <ThemedBody>
                 <ModalComponent />
 
