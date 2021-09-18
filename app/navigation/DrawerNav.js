@@ -5,9 +5,8 @@ import DrawerLayout from './DrawerLayout';
 import Home from '_Screens/home/Home';
 import Settings from '_Screens/settings/Settings';
 import ContactsList from '_Screens/permissions/contacts/ContactsList';
-/*
-Refer https://reactnavigation.org/docs/drawer-navigator#checking-if-the-drawer-is-open
-*/
+import Razorpay from '_Screens/razorpay/Razorpay';
+
 const Drawer = createDrawerNavigator();
 
 const NavDrawer = () => {
@@ -20,6 +19,7 @@ const NavDrawer = () => {
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="Settings" component={Settings} />
             <Drawer.Screen name="ContactsList" component={ContactsList} />
+            <Drawer.Screen name="Razorpay" component={Razorpay} />
         </Drawer.Navigator>
     );
 };

@@ -11,7 +11,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { useFocusEffect } from '@react-navigation/native';
 import Clipboard from '@react-native-community/clipboard';
-import Config from 'react-native-config';
+import { SOME_ENV_KEY } from '_Env';
 import { SwipeActionView } from 'react-native-action-view';
 
 import Header from '_Shared/Header';
@@ -181,7 +181,7 @@ const App = () => {
                     </TouchableOpacity>
 
                     <ThemedText>{copiedText}</ThemedText>
-                    <ThemedText>{Config.SOME_ENV_KEY}</ThemedText>
+                    <ThemedText>{SOME_ENV_KEY}</ThemedText>
 
                     <SwipeActionView
                         style={styles.swiperView}

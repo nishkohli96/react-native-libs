@@ -6,8 +6,9 @@
 
 -   [@react-native-community/clipboard](https://www.npmjs.com/package/@react-native-community/clipboard)
 -   [react-native-action-view](https://www.npmjs.com/package/react-native-action-view)
--   [react-native-config](https://www.npmjs.com/package/react-native-config)
 -   [react-native-contacts](https://www.npmjs.com/package/react-native-contacts)
+-   [react-native-dotenv](https://www.npmjs.com/package/react-native-dotenv)
+-   [react-native-razorpay](https://www.npmjs.com/package/react-native-razorpay)
 
 # Support Me
 

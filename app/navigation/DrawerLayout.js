@@ -66,6 +66,21 @@ const DrawerLayout = () => {
                         navigation.navigate('ContactsList');
                     }}
                 />
+                <DrawerItem
+                    icon={() => (
+                        <IoniconsI
+                            name="cash-outline"
+                            color={themeObj.colors.heading}
+                            size={CommonStyles.icons.drawerIcon}
+                        />
+                    )}
+                    label={() => (
+                        <ThemedHeading>Razorpay</ThemedHeading>
+                    )}
+                    onPress={() => {
+                        navigation.navigate('Razorpay');
+                    }}
+                />
             </DrawerContentScrollView>
             <DrawerItem
                 label={() => (

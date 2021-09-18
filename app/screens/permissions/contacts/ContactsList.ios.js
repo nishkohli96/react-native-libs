@@ -54,30 +54,36 @@ const ContactsList = () => {
     }
 
     return (
-        <ThemedContainer>
+        <ThemedContainer style={styles.container}>
             <Header title={t('DRAWER.contacts')} openDrawer />
             <ThemedBody>
-                <ThemedText>Get all your contacts</ThemedText>
+                <ThemedText>Scroll across the list to see your contacts</ThemedText>
+                <SafeAreaView style={styles.listView}>
+                    <ScrollView>
+                        {contacts.map(contact => (
+                            <ContactItem
+                                key={contact.recordID}
+                                item={contact}
+                            />
+                        ))}
+                    </ScrollView>
+                </SafeAreaView>
+                <ThemedText>---- End of the list ----</ThemedText>
             </ThemedBody>
-            <SafeAreaView style={styles.listView}>
-                <ScrollView>
-                    {contacts.map(contact => (
-                        <ContactItem key={contact.recordID} item={contact} />
-                    ))}
-                </ScrollView>
-            </SafeAreaView>
         </ThemedContainer>
     );
 };
 
 const styles = StyleSheet.create({
+    container: { paddingBottom: 50 },
     loadingView: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     listView: {
-        paddingLeft: 30,
+        height: 400,
+        marginBottom: 20,
     },
 });
 

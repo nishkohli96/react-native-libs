@@ -35,7 +35,7 @@ const ContactItem = props => {
                         <ContactAvatar
                             img={
                                 item.hasThumbnail
-                                    ? { uri: item.thumbnailPath }
+                                    ? item.thumbnailPath
                                     : undefined
                             }
                             placeholder={getAvatarInitials(
