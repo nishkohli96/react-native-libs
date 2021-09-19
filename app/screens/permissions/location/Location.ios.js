@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, View } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 
 import { ThemedContainer, ThemedBody, ThemedText } from '_Shared/Comps.themed';
@@ -11,47 +12,19 @@ import Header from '_Shared/Header';
 
 const Location = () => {
     const [status, setStatus] = React.useState('');
+    const [coords, setCoords] = React.useState({});
 
-    // const checkPermission = () => {
-    //     check(PERMISSIONS.IOS.LOCATION_ALWAYS)
-    //         .then(result => {
-    //             switch (result) {
-    //                 case RESULTS.UNAVAILABLE:
-    //                     setStatus(
-    //                         'This feature is not available (on this device / in this context)',
-    //                     );
-    //                     break;
-    //                 case RESULTS.DENIED:
-    //                     setStatus(
-    //                         'The permission has not been requested / is denied but requestable',
-    //                     );
-    //                     break;
-    //                 case RESULTS.LIMITED:
-    //                     setStatus(
-    //                         'The permission is limited: some actions are possible',
-    //                     );
-    //                     break;
-    //                 case RESULTS.GRANTED:
-    //                     setStatus('The permission is granted');
-    //                     break;
-    //                 case RESULTS.BLOCKED:
-    //                     setStatus(
-    //                         'The permission is denied and not requestable anymore',
-    //                     );
-    //                     break;
-    //             }
-    //         })
-    //         .catch(error => {
-    //             console.log('error: ', error);
-    //         });
-    // };
-    
+    const checkPermission = async () => {
+        const result = await Geolocation.requestAuthorization('whenInUse');
+        setStatus(result);
+    };
 
     /* Need to request position */
     const getCurrentPosition = () => {
         Geolocation.getCurrentPosition(
             position => {
-                setStatus(position);
+                console.log(position);
+                setCoords(position);
             },
             error => {
                 setStatus(error.code, error.message);
@@ -60,16 +33,28 @@ const Location = () => {
         );
     };
 
-    getCurrentPosition();
+    checkPermission();
 
     return (
         <ThemedContainer>
             <Header title="Location" />
             <ThemedBody>
                 <ThemedText>
-                    Enable permission to use device location. Current status -{' '}
+                    Device permission granted to use location. Current status -{' '}
                     {status}
                 </ThemedText>
+                <Button
+                    title="Get position"
+                    onPress={() => getCurrentPosition()}
+                />
+                {coords?.coords?.latitude && (
+                    <View>
+                        <ThemedText>Current Position is - </ThemedText>
+                        <ThemedText>
+                            ( {coords.coords.latitude}, {coords.coords.longitude} )
+                        </ThemedText>
+                    </View>
+                )}
             </ThemedBody>
         </ThemedContainer>
     );
