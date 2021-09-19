@@ -20,6 +20,7 @@
 -   [react-native-calendars](https://www.npmjs.com/package/react-native-calendars)
 -   [react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events)
 -   [react-native-camera-kit](https://www.npmjs.com/package/react-native-camera-kit)
+-   [react-native-netinfo](https://www.npmjs.com/package/react-native-netinfo)
 
 # Support Me
 

@@ -3,9 +3,12 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "android": "react-native run-android",
-        "ios": "react-native run-ios",
-        "start": "react-native start",
+        "android:dev": "APP_ENV=dev react-native run-android",
+        "android:staging": "APP_ENV=staging react-native run-android",
+        "ios:dev": "APP_ENV=dev react-native run-ios",
+        "ios:staging": "APP_ENV=staging react-native run-ios",
+        "start:dev": "APP_ENV=dev react-native start",
+        "start:staging": "APP_ENV=staging react-native start",
         "test": "jest",
         "lint": "eslint .",
         "prettier": "prettier --write ."
