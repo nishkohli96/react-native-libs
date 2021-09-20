@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { View, Text, Switch, StyleSheet, ScrollView } from 'react-native';
+import { View, Switch, StyleSheet, ScrollView } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import RNPickerSelect from 'react-native-picker-select';
+import { Picker } from '@react-native-picker/picker';
 
 import Header from '_Shared/Header';
 import { ThemedContainer, ThemedText } from '_Shared/Comps.themed';
@@ -11,7 +11,7 @@ import { Languages, useLangStore } from '_Store/lang.store';
 
 const Settings = () => {
     const { t } = useTranslation('common');
-    const { setLangAction } = useLangStore();
+    const { langName, setLangAction } = useLangStore();
     const { themeObj, setThemeAction } = useThemeStore();
 
     const [isEnabled, setIsEnabled] = React.useState(themeObj.dark);
@@ -72,6 +72,7 @@ const Settings = () => {
                             />
                         </View>
                     </View>
+
                     <View style={styles.flexRow}>
                         <View style={styles.textCol}>
                             <ThemedText style={styles.settingText}>
@@ -79,20 +80,23 @@ const Settings = () => {
                             </ThemedText>
                         </View>
                         <View style={styles.endContent}>
-                            <RNPickerSelect
-                                items={Languages}
-                                placeholder={{
-                                    label: '',
-                                    value: null,
-                                    color: themeObj.colors.primary,
-                                }}
-                                Icon={() => (
-                                    <Text style={styles.selectText}>
-                                        Select
-                                    </Text>
-                                )}
-                                onValueChange={value => setLangAction(value)}
-                            />
+                            <Picker
+                                selectedValue={langName}
+                                onValueChange={itemValue =>
+                                    setLangAction(itemValue)
+                                }
+                                dropdownIconColor={themeObj.colors.text}
+                                style={{ width: '100%' }}
+                                prompt="Choose App Language">
+                                {Languages.map((lang, index) => (
+                                    <Picker.Item
+                                        label={lang.label}
+                                        value={lang.value}
+                                        key={index}
+                                        color={themeObj.colors.primary}
+                                    />
+                                ))}
+                            </Picker>
                         </View>
                     </View>
                 </View>

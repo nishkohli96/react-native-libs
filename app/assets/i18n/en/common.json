@@ -7,11 +7,9 @@
         "cancel": "CANCEL"
     },
     "DRAWER": {
+        "contacts": "Contacts",
         "home": "Home",
-        "profile": "Profile",
-        "notifications": "Notifications",
-        "settings": "Settings",
-        "help": "Help & Support"
+        "settings": "Settings"
     },
     "HOMESCREEN": {
         "exitMsg": "Close the app?"
@@ -25,7 +23,7 @@
         "connection": "Please Check your Internet Connection",
         "enterPhone": "Enter Phone Number(With Country Code)",
         "enterOTP": "Enter OTP",
-        "getOTP":"Get OTP",
+        "getOTP": "Get OTP",
         "submitOTP": "Submit",
         "ssoGoogle": "Sign in with Google",
         "ssoFacebook": "Sign in with Facebook",

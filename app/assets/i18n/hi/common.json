@@ -7,11 +7,9 @@
         "cancel": "रद्द करें"
     },
     "DRAWER": {
+        "contacts": "संपर्क",
         "home": "होम",
-        "profile": "प्रोफ़ाइल",
-        "notifications": "सूचनाएं",
-        "settings": "सैटिंग",
-        "help": "सहायता और समर्थन"
+        "settings": "सैटिंग"
     },
     "HOMESCREEN": {
         "exitMsg": "ऐप बंद करें?"
@@ -25,7 +23,7 @@
         "connection": "कृपया अपने इंटरनेट कनेक्शन की जाँच करें",
         "enterPhone": "फोन नंबर दर्ज करें (कोड के साथ)",
         "enterOTP": "OTP दर्ज करें",
-        "getOTP":"OTP प्राप्त करें",
+        "getOTP": "OTP प्राप्त करें",
         "submitOTP": "प्रस्तुत",
         "ssoGoogle": "Google से साइन इन करें",
         "ssoFacebook": "Facebook से साइन इन करें",

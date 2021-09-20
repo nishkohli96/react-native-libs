@@ -39,27 +39,42 @@ const DrawerLayout = () => {
                 <DrawerItem
                     icon={() => (
                         <IoniconsI
-                            name="logo-android"
-                            color={themeObj.colors.heading}
-                            size={CommonStyles.icons.drawerIcon}
-                        />
-                    )}
-                    label={() => <ThemedHeading>TABS</ThemedHeading>}
-                    onPress={() => {
-                        navigation.navigate('TabsNav');
-                    }}
-                />
-                <DrawerItem
-                    icon={() => (
-                        <IoniconsI
                             name="ios-settings-outline"
                             color={themeObj.colors.heading}
                             size={CommonStyles.icons.drawerIcon}
                         />
                     )}
-                    label={() => <ThemedHeading>{t('DRAWER.settings')}</ThemedHeading>}
+                    label={() => (
+                        <ThemedHeading>{t('DRAWER.settings')}</ThemedHeading>
+                    )}
                     onPress={() => {
                         navigation.navigate('Settings');
+                    }}
+                />
+                <DrawerItem
+                    icon={() => (
+                        <IoniconsI
+                            name="md-phone-portrait-outline"
+                            color={themeObj.colors.heading}
+                            size={CommonStyles.icons.drawerIcon}
+                        />
+                    )}
+                    label={() => <ThemedHeading>Permissions</ThemedHeading>}
+                    onPress={() => {
+                        navigation.navigate('Permissions');
+                    }}
+                />
+                <DrawerItem
+                    icon={() => (
+                        <IoniconsI
+                            name="cash-outline"
+                            color={themeObj.colors.heading}
+                            size={CommonStyles.icons.drawerIcon}
+                        />
+                    )}
+                    label={() => <ThemedHeading>Razorpay</ThemedHeading>}
+                    onPress={() => {
+                        navigation.navigate('Razorpay');
                     }}
                 />
             </DrawerContentScrollView>
