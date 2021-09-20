@@ -17,6 +17,8 @@
 -   To create react-native-app with custom package name, do a project-wide find and replace ```com.awesomeproject → com.mycompany.myapp``` Also in the `android` directory,
 ```src/main/java/com/awesomeproject → src/main/java/com/mycompany/myapp```
 
+-   Read the document of [react-native-config](https://www.npmjs.com/package/react-native-config) to use .env files based upon the shell. For running android app in windows, I used `SET ENVFILE=.env.staging && react-native run-android`.
+
 -   Generate your app Icon using [MakeAppIcon](https://makeappicon.com/).Read More about app icon setup on this [Link](https://aboutreact.com/react-native-change-app-icon/).iOS icons can be generated using `Icon Set Creater` app available on the App Store. Make sure to also provide a round icon with the name `ic_launcher_round.png` in your android folder for various `mipmap-` directories.
 Go to [easyappicon.com](https://easyappicon.com/).
 

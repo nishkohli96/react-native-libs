@@ -6,6 +6,7 @@ import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider } from 'styled-components/native';
+import Config from 'react-native-config';
 
 import StackNav from '_Navigation/StackNav';
 import { useThemeStore } from '_Store/theme.store';
@@ -20,6 +21,7 @@ const App = () => {
     const { getOnboardAction } = useOnboardStore();
     const { themeObj, getThemeAction } = useThemeStore();
     const { langName, getLangAction } = useLangStore();
+    console.log(Config.ENV_KEY)
 
     React.useEffect(() => {
         getOnboardAction();
