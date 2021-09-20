@@ -17,7 +17,7 @@ const Razorpay = () => {
             image: 'https://i.imgur.com/3g7nmJC.png',
             currency: 'INR',
             key: Config.RAZORPAY_KEY,
-            amount: 2000,
+            amount: 100,
             name: 'Jon',
             prefill: {
                 email: 'test@razorpay.com',
