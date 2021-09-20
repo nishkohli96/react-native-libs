@@ -20,18 +20,6 @@
                     "_Utils": "./app/utils"
                 }
             }
-        ],
-        [
-            "module:react-native-dotenv",
-            {
-                "moduleName": "_Env",
-                "path": ".env",
-                "blocklist": null,
-                "allowlist": null,
-                "safe": true,
-                "allowUndefined": false,
-                "verbose": false
-            }
         ]
     ]
 }

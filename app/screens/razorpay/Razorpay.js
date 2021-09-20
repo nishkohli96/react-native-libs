@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from 'react-native';
+import Config from 'react-native-config';
 import RazorpayCheckout from 'react-native-razorpay';
 
-import { RAZORPAY_SANDBOX_KEY } from '_Env';
 import { ThemedContainer, ThemedBody } from '_Shared/Comps.themed';
 import Header from '_Shared/Header';
 
@@ -16,8 +16,8 @@ const Razorpay = () => {
             description: 'Test payment',
             image: 'https://i.imgur.com/3g7nmJC.png',
             currency: 'INR',
-            key: RAZORPAY_SANDBOX_KEY,
-            amount: '80000',
+            key: Config.RAZORPAY_KEY,
+            amount: 2000,
             name: 'Jon',
             prefill: {
                 email: 'test@razorpay.com',
