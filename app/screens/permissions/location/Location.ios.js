@@ -51,7 +51,8 @@ const Location = () => {
                     <View>
                         <ThemedText>Current Position is - </ThemedText>
                         <ThemedText>
-                            ( {coords.coords.latitude}, {coords.coords.longitude} )
+                            ( {coords.coords.latitude},{' '}
+                            {coords.coords.longitude} )
                         </ThemedText>
                     </View>
                 )}

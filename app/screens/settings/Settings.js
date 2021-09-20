@@ -99,7 +99,6 @@ const Settings = () => {
                             </Picker>
                         </View>
                     </View>
-
                 </View>
             </ScrollView>
         </ThemedContainer>
