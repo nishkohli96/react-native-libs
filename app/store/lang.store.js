@@ -3,7 +3,7 @@ import { makeAutoObservable, configure } from 'mobx';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export class LangStore {
-    langName = 'hi';
+    langName = 'en';
 
     constructor() {
         configure({

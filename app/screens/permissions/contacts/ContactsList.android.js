@@ -14,7 +14,10 @@ import Header from '_Shared/Header';
 import ContactItem from './ContactItem';
 
 /* Read the Guide - https://www.npmjs.com/package/react-native-contacts */
+
 const ContactsList = () => {
+    /* Make sure to add relevant permissions in AndroidManifest.xml" */
+
     const { t } = useTranslation('common');
     const [contacts, setContacts] = React.useState([]);
 
@@ -29,11 +32,9 @@ const ContactsList = () => {
                     buttonNegative: 'Cancel',
                 },
             );
-            console.log('granted: ', granted);
 
             if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-                const contacts = Contacts.getAll();
-                console.log(contacts[0]);
+                const contacts = await Contacts.getAll();
 
                 let newContacts = [];
                 contacts.map(contact => {

@@ -18,11 +18,11 @@ const Razorpay = () => {
             currency: 'INR',
             key: Config.RAZORPAY_KEY,
             amount: 100,
-            name: 'Jon',
+            name: 'Tester',
             prefill: {
-                email: 'test@razorpay.com',
+                email: 'nishkohli96@gmail.com',
                 contact: '9814110843',
-                name: 'Razorpay Software',
+                name: 'Nishant',
             },
             theme: { color: '#007ABA' },
         };
