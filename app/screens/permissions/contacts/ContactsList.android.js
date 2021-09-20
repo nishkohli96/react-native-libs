@@ -19,16 +19,22 @@ const ContactsList = () => {
     const [contacts, setContacts] = React.useState([]);
 
     const getContactList = async () => {
-        PermissionsAndroid.request(
-            PermissionsAndroid.PERMISSIONS.READ_CONTACTS,
-            {
-                title: 'Contacts',
-                message: 'This app would like to view your contacts.',
-                buttonPositive: 'Accept',
-            },
-        )
-            .then(Contacts.getAll())
-            .then(contacts => {
+        try {
+            const granted = await PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.READ_CONTACTS,
+                {
+                    title: 'Contacts',
+                    message: 'This app would like to view your contacts.',
+                    buttonPositive: 'Accept',
+                    buttonNegative: 'Cancel',
+                },
+            );
+            console.log('granted: ', granted);
+
+            if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                const contacts = Contacts.getAll();
+                console.log(contacts[0]);
+
                 let newContacts = [];
                 contacts.map(contact => {
                     newContacts.push({
@@ -50,10 +56,15 @@ const ContactsList = () => {
                         : -1,
                 );
                 setContacts(newContacts);
-            });
+            } else {
+                console.log('Contacts permission denied');
+            }
+        } catch (err) {
+            console.warn(err);
+        }
     };
 
-    // getContactList();
+    getContactList();
 
     if (!contacts) {
         return (
