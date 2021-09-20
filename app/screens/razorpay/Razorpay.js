@@ -21,7 +21,7 @@ const Razorpay = () => {
             name: 'Jon',
             prefill: {
                 email: 'test@razorpay.com',
-                contact: '9191919191',
+                contact: '9814110843',
                 name: 'Razorpay Software',
             },
             theme: { color: '#007ABA' },
@@ -29,6 +29,14 @@ const Razorpay = () => {
         RazorpayCheckout.open(options)
             .then(data => {
                 // handle success
+                /* Data of the form-
+                {
+                    "checkout_logo": "https://cdn.razorpay.com/logo.png", 
+                    "org_logo": "", 
+                    "org_name": "Razorpay Software Private Ltd", 
+                    "razorpay_payment_id": "pay_HzqD9NnvCU0jYD"
+                }  
+                */
                 console.log(`Success: ${data.razorpay_payment_id}`);
             })
             .catch(error => {
