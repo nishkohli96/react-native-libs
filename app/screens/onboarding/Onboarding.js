@@ -32,15 +32,14 @@ const IntroScreen = () => {
     };
 
     const PageImage = () => (
-            <Image
-                source={require('_Images/hi.png')}
-                style={styles.image}
-            />
+        <Image source={require('_Images/hi.png')} style={styles.image} />
     );
-    
+
     const InternetImage = () => (
         <Image
-            source={{ uri: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YW5kcm9pZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"}}
+            source={{
+                uri: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YW5kcm9pZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+            }}
             style={styles.image}
         />
     );

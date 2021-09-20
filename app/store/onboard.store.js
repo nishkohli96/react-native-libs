@@ -3,14 +3,13 @@ import { makeAutoObservable, configure } from 'mobx';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export class OnboardStore {
-
     isOnboard = false;
 
     constructor() {
         configure({
             enforceActions: 'never' /* disable strict-mode warning */,
-        });   
-        makeAutoObservable(this, {}, { autoBind: true })
+        });
+        makeAutoObservable(this, {}, { autoBind: true });
     }
 
     async getOnboardAction() {
@@ -18,8 +17,7 @@ export class OnboardStore {
             const firstVisit = await AsyncStorage.getItem('isOnboard');
             if (firstVisit) {
                 this.isOnboard = true;
-            }
-            else {
+            } else {
                 this.isOnboard = false;
             }
         } catch (e) {
@@ -41,4 +39,3 @@ const onboardStore = new OnboardStore();
 
 export const OnboardContext = createContext(onboardStore);
 export const useOnboardStore = () => useContext(OnboardContext);
-

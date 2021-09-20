@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { View, StyleSheet, Platform } from 'react-native';
 import { observer } from 'mobx-react-lite';
 import { useNavigation } from '@react-navigation/native';
@@ -43,7 +44,7 @@ const Header = ({ title, openDrawer = false }) => {
             ) : (
                 <IoniconsI
                     name="arrow-back"
-                    size={25}
+                    size={30}
                     color={themeObj.colors.heading}
                     onPress={() => navigation.goBack()}
                 />
@@ -53,6 +54,10 @@ const Header = ({ title, openDrawer = false }) => {
             </View>
         </View>
     );
+};
+
+Header.propTypes = {
+    title: PropTypes.string,
 };
 
 export default observer(Header);

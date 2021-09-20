@@ -15,6 +15,9 @@ target 'ReactNativeLibs' do
   target 'ReactNativeLibsTests' do
     inherit! :complete
     # Pods for testing
+
+    # For react-native-permissions
+
   end
 
   # Enables Flipper.
