@@ -77,10 +77,23 @@ const DrawerLayout = () => {
                         navigation.navigate('Razorpay');
                     }}
                 />
-                <DrawerItem
+                 <DrawerItem
                     icon={() => (
                         <IoniconsI
                             name="bar-chart"
+                            color={themeObj.colors.heading}
+                            size={CommonStyles.icons.drawerIcon}
+                        />
+                    )}
+                    label={() => <ThemedHeading>Line Chart</ThemedHeading>}
+                    onPress={() => {
+                        navigation.navigate('LineChartScreen');
+                    }}
+                />
+                <DrawerItem
+                    icon={() => (
+                        <IoniconsI
+                            name="pie-chart-outline"
                             color={themeObj.colors.heading}
                             size={CommonStyles.icons.drawerIcon}
                         />
