@@ -11,28 +11,37 @@ import {
 import Header from '_Shared/Header';
 
 const RadarChartScreen = () => {
-    const [legend] = React.useState({
+    const legend = {
         enabled: true,
         textSize: 14,
         form: 'CIRCLE',
         wordWrapEnabled: true,
-    });
+    };
 
-    const [xAxis] = React.useState({
-        valueFormatter: ['A', 'B', 'C', 'D', 'E'],
-    });
+    const xAxis = {
+        valueFormatter: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
+        zeroLine: {
+            enabled: true,
+            lineWidth: 1.5,
+        },
+    };
 
-    const [data] = React.useState({
+    const data = {
         dataSets: [
             {
                 values: [
-                    { value: 100 },
+                    { value: 90 },
                     { value: 110 },
-                    { value: 105 },
+                    { value: 125 },
                     { value: 115 },
                     { value: 110 },
+                    { value: 130 },
+                    { value: 107 },
+                    { value: 126 },
+                    { value: 104 },
+                    { value: 109 },
                 ],
-                label: 'DS 1',
+                label: 'Some stat',
                 config: {
                     color: processColor('#FF8C9D'),
                     drawFilled: true,
@@ -41,40 +50,8 @@ const RadarChartScreen = () => {
                     lineWidth: 2,
                 },
             },
-            {
-                values: [
-                    { value: 115 },
-                    { value: 100 },
-                    { value: 105 },
-                    { value: 110 },
-                    { value: 120 },
-                ],
-                label: 'DS 2',
-                config: {
-                    color: processColor('#C0FF8C'),
-                    drawFilled: true,
-                    fillColor: processColor('#C0FF8C'),
-                    fillAlpha: 150,
-                    lineWidth: 1.5,
-                },
-            },
-            {
-                values: [
-                    { value: 105 },
-                    { value: 115 },
-                    { value: 121 },
-                    { value: 110 },
-                    { value: 105 },
-                ],
-                label: 'DS 3',
-                config: {
-                    color: processColor('#8CEAFF'),
-                    drawFilled: true,
-                    fillColor: processColor('#8CEAFF'),
-                },
-            },
         ],
-    });
+    };
 
     const [selectedEntry, setSelectedEntry] = React.useState('');
 
@@ -108,10 +85,10 @@ const RadarChartScreen = () => {
                             legend={legend}
                             drawWeb={true}
                             webLineWidth={5}
-                            webLineWidthInner={5}
+                            webLineWidthInner={2}
                             webAlpha={255}
-                            webColor={processColor('red')}
-                            webColorInner={processColor('green')}
+                            webColor={processColor('#007aba')}
+                            webColorInner={processColor('silver')}
                             skipWebLineCount={1}
                             onSelect={e => handleSelect(e)}
                             onChange={event => console.log(event.nativeEvent)}
