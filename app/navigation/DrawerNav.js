@@ -15,6 +15,7 @@ import Charts from '_Screens/charts';
 import LineChartScreen from '_Screens/charts/LineChartScreen';
 import RadarChartScreen from '_Screens/charts/RadarChartScreen';
 import VictoryBarChart from '_Screens/charts/VictoryBarChart';
+import VictoryPolarChart from '_Screens/charts/VictoryPolarChart';
 
 const Drawer = createDrawerNavigator();
 
@@ -32,6 +33,7 @@ const NavDrawer = () => {
             {/* Chart Screens */}
             <Drawer.Screen name="Charts" component={Charts} />
             <Drawer.Screen name="VictoryBarChart" component={VictoryBarChart} />
+            <Drawer.Screen name="VictoryPolarChart" component={VictoryPolarChart} />
             {Platform.OS === 'android' && (
                 <>
                     <Drawer.Screen
