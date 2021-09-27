@@ -85,35 +85,9 @@ const DrawerLayout = () => {
                             size={CommonStyles.icons.drawerIcon}
                         />
                     )}
-                    label={() => <ThemedHeading>Line Chart</ThemedHeading>}
+                    label={() => <ThemedHeading>Charts</ThemedHeading>}
                     onPress={() => {
-                        navigation.navigate('LineChartScreen');
-                    }}
-                />
-                <DrawerItem
-                    icon={() => (
-                        <IoniconsI
-                            name="pie-chart-outline"
-                            color={themeObj.colors.heading}
-                            size={CommonStyles.icons.drawerIcon}
-                        />
-                    )}
-                    label={() => <ThemedHeading>Radar Chart</ThemedHeading>}
-                    onPress={() => {
-                        navigation.navigate('RadarChartScreen');
-                    }}
-                />
-                 <DrawerItem
-                    icon={() => (
-                        <IoniconsI
-                            name="bar-chart"
-                            color={themeObj.colors.heading}
-                            size={CommonStyles.icons.drawerIcon}
-                        />
-                    )}
-                    label={() => <ThemedHeading>Victory Bar Chart</ThemedHeading>}
-                    onPress={() => {
-                        navigation.navigate('VictoryBarChart');
+                        navigation.navigate('Charts');
                     }}
                 />
             </DrawerContentScrollView>

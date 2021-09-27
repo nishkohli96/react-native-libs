@@ -1,5 +1,3 @@
-import IoniconsI from 'react-native-vector-icons/Ionicons';
-
 export const PermissionsList = [
     {
         navigateRoute: 'ContactsList',
@@ -13,21 +11,18 @@ export const PermissionsList = [
     },
 ];
 
-export const ChartList = [
+export const ChartsList = [
     {
         navigateRoute: 'VictoryBarChart',
-        iconName: 'bar-chart',
         label: 'Victory BarChart',
     },
     /* No iOS code for these 2 pages, so they're at the bottom of the list */
     {
         navigateRoute: 'LineChartScreen',
-        iconName: 'bar-chart',
         label: 'Line Chart',
     },
     {
-        navigateRoute: 'RadarhartScreen',
-        iconName: 'pie-chart-outline',
+        navigateRoute: 'RadarChartScreen',
         label: 'Radar Chart',
     },
 ];

@@ -56,14 +56,14 @@ const styles = StyleSheet.create({
     card: { marginTop: 30, alignItems: 'center' },
 });
 
-RenderListRoutes.PropTypes = {
+RenderListRoutes.propTypes = {
     headerTitle: PropTypes.string,
-    routesArr: PropTypes.object,
-}
+    routesArr: PropTypes.array,
+};
 
 RenderListRoutes.defaultProps = {
     headerTitle: 'headerTitle',
     routesArr: [],
-}
+};
 
 export default RenderListRoutes;

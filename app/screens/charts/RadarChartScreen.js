@@ -67,7 +67,7 @@ const RadarChartScreen = () => {
 
     return (
         <ThemedContainer>
-            <Header title="Radar Chart" openDrawer />
+            <Header title="Radar Chart" />
             <ThemedBody>
                 <ThemedCard>
                     <View style={styles.textView}>

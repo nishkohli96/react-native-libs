@@ -7,7 +7,7 @@ import Header from '_Shared/Header';
 const LineChartScreen = () => {
     return (
         <ThemedContainer>
-            <Header title="Line Chart" openDrawer />
+            <Header title="Line Chart" />
             <ThemedBody>
                 <ThemedCard>
                     <LineChart

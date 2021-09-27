@@ -19,7 +19,7 @@ const data = [
 const VictoryBarChart = () => {
     return (
         <ThemedContainer>
-            <Header title="Bar Chart" openDrawer />
+            <Header title="Bar Chart" />
             <ThemedBody>
                 <ThemedCard>
                     <VictoryChart width={350} theme={VictoryTheme.material}>

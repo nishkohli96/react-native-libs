@@ -1,15 +1,17 @@
 import React from 'react';
-
+import { Platform } from 'react-native';
 import RenderListRoutes from '_Shared/RenderListRoutes';
-import { PermissionsList } from '_Constants/ListRoutes';
+import { ChartsList } from '_Constants/ListRoutes';
 
-const Permissions = () => {
+const Charts = () => {
     return (
         <RenderListRoutes
-            headerTitle="Permissions"
-            routesArr={PermissionsList}
+            headerTitle="Charts"
+            routesArr={
+                Platform.OS === 'android' ? ChartsList : ChartsList.slice(0, -2)
+            }
         />
     );
 };
 
-export default Permissions;
+export default Charts;
