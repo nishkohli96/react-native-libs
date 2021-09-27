@@ -77,7 +77,7 @@ const DrawerLayout = () => {
                         navigation.navigate('Razorpay');
                     }}
                 />
-                 <DrawerItem
+                <DrawerItem
                     icon={() => (
                         <IoniconsI
                             name="bar-chart"
@@ -101,6 +101,19 @@ const DrawerLayout = () => {
                     label={() => <ThemedHeading>Radar Chart</ThemedHeading>}
                     onPress={() => {
                         navigation.navigate('RadarChartScreen');
+                    }}
+                />
+                 <DrawerItem
+                    icon={() => (
+                        <IoniconsI
+                            name="bar-chart"
+                            color={themeObj.colors.heading}
+                            size={CommonStyles.icons.drawerIcon}
+                        />
+                    )}
+                    label={() => <ThemedHeading>Victory Bar Chart</ThemedHeading>}
+                    onPress={() => {
+                        navigation.navigate('VictoryBarChart');
                     }}
                 />
             </DrawerContentScrollView>

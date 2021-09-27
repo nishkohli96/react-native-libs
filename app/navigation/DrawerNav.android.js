@@ -10,6 +10,7 @@ import ContactsList from '_Screens/permissions/contacts/ContactsList';
 import Location from '_Screens/permissions/location/Location';
 import LineChartScreen from '_Screens/charts/LineChartScreen';
 import RadarChartScreen from '_Screens/charts/RadarChartScreen';
+import VictoryBarChart from '_Screens/charts/VictoryBarChart';
 
 const Drawer = createDrawerNavigator();
 
@@ -25,6 +26,7 @@ const NavDrawer = () => {
             <Drawer.Screen name="Razorpay" component={Razorpay} />
             <Drawer.Screen name="LineChartScreen" component={LineChartScreen} />
             <Drawer.Screen name="RadarChartScreen" component={RadarChartScreen} />
+            <Drawer.Screen name="VictoryBarChart" component={VictoryBarChart} />
 
             {/* Permission Related Screens */}
             <Drawer.Screen name="Permissions" component={Permissions} />
