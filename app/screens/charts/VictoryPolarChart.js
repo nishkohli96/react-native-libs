@@ -11,9 +11,24 @@ import {
 import { ThemedContainer, ThemedBody, ThemedCard } from '_Shared/Comps.themed';
 import Header from '_Shared/Header';
 
+/* 
+    Dedicated Example link ->
+    https://formidable.com/open-source/victory/gallery/radar-chart/
+*/
+
 const VictoryPolarChart = () => {
     const characterData = [
-        { strength: 1, intelligence: 250, luck: 1, stealth: 40, charisma: 50 },
+        {
+            key1: 56,
+            key2: 80,
+            key3: 45,
+            key4: 60,
+            key5: 36,
+            key6: 80,
+            key7: 24,
+            key8: 38,
+            key9: 52,
+        },
     ];
 
     const getMaxima = data => {
@@ -22,7 +37,7 @@ const VictoryPolarChart = () => {
             return memo;
         }, {});
         return Object.keys(groupedData).reduce((memo, key) => {
-            memo[key] = Math.max(...groupedData[key]);
+            memo[key] = 100; //Math.max(...groupedData[key]);
             return memo;
         }, {});
     };
@@ -35,7 +50,7 @@ const VictoryPolarChart = () => {
                 return { x: key, y: d[key] / maxByGroup[key] };
             });
         };
-        
+
         return data.map(datum => makeDataArray(datum));
     };
 
@@ -76,13 +91,16 @@ const VictoryPolarChart = () => {
                                         },
                                     }}
                                     tickLabelComponent={
-                                        <VictoryLabel labelPlacement="vertical" />
+                                        <VictoryLabel
+                                            labelPlacement="vertical"
+                                            style={{ display: 'none' }}
+                                        />
                                     }
                                     labelPlacement="perpendicular"
                                     axisValue={i + 1}
                                     label={key}
                                     tickFormat={t => Math.ceil(t * maxima[key])}
-                                    tickValues={[0.25, 0.5, 0.75]}
+                                    tickValues={[0.2, 0.4, 0.6, 0.8]}
                                 />
                             );
                         })}
