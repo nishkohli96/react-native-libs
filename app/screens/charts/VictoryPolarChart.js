@@ -14,8 +14,6 @@ import Header from '_Shared/Header';
 const VictoryPolarChart = () => {
     const characterData = [
         { strength: 1, intelligence: 250, luck: 1, stealth: 40, charisma: 50 },
-        { strength: 2, intelligence: 300, luck: 2, stealth: 80, charisma: 90 },
-        { strength: 5, intelligence: 225, luck: 3, stealth: 60, charisma: 120 },
     ];
 
     const getMaxima = data => {
@@ -31,11 +29,13 @@ const VictoryPolarChart = () => {
 
     const processData = data => {
         const maxByGroup = getMaxima(data);
+
         const makeDataArray = d => {
             return Object.keys(d).map(key => {
                 return { x: key, y: d[key] / maxByGroup[key] };
             });
         };
+        
         return data.map(datum => makeDataArray(datum));
     };
 
@@ -49,10 +49,11 @@ const VictoryPolarChart = () => {
                 <ThemedCard>
                     <VictoryChart
                         polar
+                        width={350}
                         theme={VictoryTheme.material}
                         domain={{ y: [0, 1] }}>
                         <VictoryGroup
-                            colorScale={['gold', 'orange', 'tomato']}
+                            colorScale={['gold']}
                             style={{
                                 data: { fillOpacity: 0.2, strokeWidth: 2 },
                             }}>
@@ -66,12 +67,12 @@ const VictoryPolarChart = () => {
                                     key={i}
                                     dependentAxis
                                     style={{
-                                        axisLabel: { padding: 10 },
+                                        axisLabel: { padding: 15 },
                                         axis: { stroke: 'none' },
                                         grid: {
-                                            stroke: 'grey',
-                                            strokeWidth: 0.25,
-                                            opacity: 0.5,
+                                            stroke: '#959fa8',
+                                            strokeWidth: 2,
+                                            // opacity: 0.5,
                                         },
                                     }}
                                     tickLabelComponent={
@@ -89,8 +90,8 @@ const VictoryPolarChart = () => {
                             labelPlacement="parallel"
                             tickFormat={() => ''}
                             style={{
-                                axis: { stroke: 'none' },
-                                grid: { stroke: 'grey', opacity: 0.5 },
+                                axis: { stroke: 'grey' },
+                                grid: { stroke: 'red', opacity: 0.8 },
                             }}
                         />
                     </VictoryChart>
