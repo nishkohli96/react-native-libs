@@ -9,6 +9,7 @@
                 "extensions": [".js", ".ios.js", ".android.js"],
                 "alias": {
                     "_App": "./app",
+                    "_Constants": "./app/constants",
                     "_Fonts": "./app/assets/fonts",
                     "_Images": "./app/assets/images",
                     "_I18N": "./app/assets/i18n",
