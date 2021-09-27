@@ -33,6 +33,7 @@
 -   [react-native-contacts](https://www.npmjs.com/package/react-native-contacts)
 -   [react-native-geolocation-service](https://www.npmjs.com/package/react-native-geolocation-service)
 -   [react-native-razorpay](https://www.npmjs.com/package/react-native-razorpay)
+-   [victory-native](https://www.npmjs.com/package/victory-native)
 
 # Other Libaries not used here
 

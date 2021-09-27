@@ -30,6 +30,7 @@ const NavDrawer = () => {
             <Drawer.Screen name="Settings" component={Settings} />
             <Drawer.Screen name="Razorpay" component={Razorpay} />
 
+<<<<<<< HEAD
             {/* Chart Screens */}
             <Drawer.Screen name="Charts" component={Charts} />
             <Drawer.Screen name="VictoryBarChart" component={VictoryBarChart} />
@@ -48,6 +49,9 @@ const NavDrawer = () => {
             )}
 
             {/* Permission Screens */}
+=======
+            {/* Permission Related Screens */}
+>>>>>>> origin/main
             <Drawer.Screen name="Permissions" component={Permissions} />
             <Drawer.Screen name="ContactsList" component={ContactsList} />
             <Drawer.Screen name="Location" component={Location} />
