@@ -28,10 +28,12 @@
 ## Main Libraries Used
 
 -   [@react-native-community/clipboard](https://www.npmjs.com/package/@react-native-community/clipboard)
+-   [react-native-charts-wrapper](https://www.npmjs.com/package/react-native-charts-wrapper) ( Only Android, iOS was breaking on my M1 Mac )
 -   [react-native-config](https://www.npmjs.com/package/react-native-config)
 -   [react-native-contacts](https://www.npmjs.com/package/react-native-contacts)
 -   [react-native-geolocation-service](https://www.npmjs.com/package/react-native-geolocation-service)
 -   [react-native-razorpay](https://www.npmjs.com/package/react-native-razorpay)
+-   [victory-native](https://www.npmjs.com/package/victory-native)
 
 # Other Libaries not used here
 
